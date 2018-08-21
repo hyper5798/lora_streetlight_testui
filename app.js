@@ -51,7 +51,7 @@ var redSettings = {
     functionGlobalContext: {
     	momentModule:require("moment"),
 		  msgTools:require("./models/msgTools.js"),
-    	debug:debug
+    	work: require("./models/work.js")
     }    // enables global context
 };
 
@@ -121,14 +121,14 @@ sock.on('connection',function(client){
          console.log('Server has disconnected!');
 	});
 
-	/*client.on('new_message_test',function(data){
-		client.emit('new_message_receive_mqtt','new_message_test');
-	});*/
-
-	//----------------------------------------------------------------------------
-	client.on('chart_client',function(data){
-		console.log('Debug cart_client ------------------------------------------------------------start' );
-		console.log('Debug cart_client :'+data );
+	client.on('serialport_socket',function(data){
+		console.log('serialport_socket ------------------------------------------------------------start' );
+		console.log('Debug serialport_socket :'+data );
+  });
+  
+  client.on('serialport_receive',function(data){
+		console.log('serialport_receive ------------------------------------------------------------start' );
+		console.log('Debug serialport_receive :'+data );
 	});
 
 	client.on('disconnect', function () {

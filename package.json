@@ -1,6 +1,6 @@
 {
   "name": "dlControl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -21,10 +21,12 @@
     "mqtt": "^1.11.2",
     "node-red": "^0.15.2",
     "node-red-contrib-mqtt-broker": "^0.2.4",
+    "node-red-contrib-serialport-rs485": "0.0.6",
     "node-red-dashboard": "^2.9.4",
     "node-schedule": "^1.1.1",
+    "serialport": "^6.2.2",
     "serve-favicon": "~2.3.0",
-    "socket.io": "*",
+    "socket.io": "^2.1.1",
     "socket.io-client": "^1.4.8"
   }
 }
